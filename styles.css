@@ -1,0 +1,173 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #00cc99;
+    color: #1a1a1a;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.5em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.section h2 {
+    color: #00cc99;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.section ul li {
+    margin: 20px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1em;
+}
+
+/* Directory specific styles */
+.section.directory {
+    padding: 40px;
+}
+
+.section.directory h2 {
+    margin-bottom: 40px;
+}
+
+.idea-directory {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 100%;
+}
+
+.idea-card {
+    background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.idea-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.idea-card h3 {
+    color: #00cc99;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.idea-card p {
+    margin: 15px 0;
+    line-height: 1.5;
+    max-width: none;
+}
+
+.idea-card button {
+    background-color: #00cc99;
+    color: #1a1a1a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.idea-card button:hover {
+    background-color: #00b386;
+    transform: translateY(-2px);
+}
+
+.more-info {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.more-info h4 {
+    color: #00cc99;
+    margin: 15px 0 8px;
+}
+
+.score {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #00cc99;
+    font-style: italic;
+}
+
+.submit-button {
+    background-color: #00cc99;
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 40px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #00b386;
+    transform: translateY(-2px);
+} 
