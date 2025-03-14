@@ -4,24 +4,27 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #00cc99;
+    background: linear-gradient(180deg, #00cc99 0%, #00b386 100%);
     color: #1a1a1a;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 3.2em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 1.5em;
+    margin: 15px 0 0;
+    font-size: 1.6em;
+    opacity: 0.9;
 }
 
 .container {
@@ -40,21 +43,25 @@ header p {
 
 .section h2 {
     color: #00cc99;
-    margin-bottom: 25px;
-    font-size: 2.2em;
+    margin-bottom: 30px;
+    font-size: 2.4em;
+    font-weight: 700;
     text-align: left;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 4px rgba(0, 204, 153, 0.2);
 }
 
 .section p {
     max-width: 800px;
-    margin: 20px auto;
-    font-size: 1.15em;
-    line-height: 1.8;
+    margin: 25px auto;
+    font-size: 1.2em;
+    line-height: 1.9;
     text-align: left;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .section ul {
@@ -66,19 +73,38 @@ header p {
 }
 
 .section ul li {
-    margin: 20px 0;
-    padding-left: 30px;
+    margin: 25px 0;
+    padding-left: 35px;
     position: relative;
-    font-size: 1.1em;
+    font-size: 1.15em;
+    line-height: 1.8;
+}
+
+.section ul li::before {
+    content: "🌱";
+    position: absolute;
+    left: 0;
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+
+/* Accent elements */
+.highlight {
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.subheading {
+    color: #e6e6e6;
+    font-size: 1.3em;
+    margin: 30px 0 20px;
+    font-weight: 500;
 }
 
 /* Directory specific styles */
 .section.directory {
-    padding: 40px;
-}
-
-.section.directory h2 {
-    margin-bottom: 40px;
+    padding: 45px;
+    background: linear-gradient(145deg, rgba(51, 51, 51, 0.8) 0%, rgba(41, 41, 41, 0.9) 100%);
 }
 
 .idea-directory {
@@ -90,23 +116,27 @@ header p {
 }
 
 .idea-card {
-    background-color: rgba(51, 51, 51, 0.9);
+    background: linear-gradient(145deg, rgba(51, 51, 51, 0.95) 0%, rgba(41, 41, 41, 0.98) 100%);
     border-radius: 15px;
-    padding: 25px;
+    padding: 28px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.4s ease;
     text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .idea-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 204, 153, 0.2);
 }
 
 .idea-card h3 {
     color: #00cc99;
     margin-top: 0;
-    font-size: 1.4em;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .idea-card p {
@@ -115,9 +145,7 @@ header p {
     max-width: none;
 }
 
-.idea-card button {
-    background-color: #00cc99;
-    color: #1a1a1a;
+.idea-directory .idea-card button {
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
@@ -129,9 +157,28 @@ header p {
     transition: all 0.3s ease;
 }
 
-.idea-card button:hover {
-    background-color: #00b386;
+.idea-directory .idea-card button.capital-btn {
+    background-color: #00cc99 !important;
+    color: #1a1a1a !important;
+    border: none;
+}
+
+.idea-directory .idea-card button.learn-more-btn {
+    background-color: transparent !important;
+    color: #00cc99 !important;
+    border: 1px solid #00cc99;
+}
+
+.idea-directory .idea-card button.capital-btn:hover {
+    background-color: #00b386 !important;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 204, 153, 0.3);
+}
+
+.idea-directory .idea-card button.learn-more-btn:hover {
+    background-color: rgba(0, 204, 153, 0.1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 204, 153, 0.2);
 }
 
 .more-info {
@@ -174,54 +221,90 @@ header p {
 }
 
 .flow-steps {
-    margin: 30px 0;
-}
-
-.flow-steps p {
-    margin: 25px 0;
-    font-size: 1.15em;
-    line-height: 1.8;
-}
-
-.flow-steps strong {
-    color: #00cc99;
-    font-size: 1.2em;
-    display: block;
-    margin-bottom: 8px;
+    display: none;
 }
 
 .key-points {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 40px;
+    padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .key-points p {
     margin: 15px 0;
     font-size: 1.1em;
     color: rgba(255, 255, 255, 0.9);
+    text-align: left;
 }
 
-.key-points em {
+.key-points strong {
     color: #00cc99;
-    font-style: normal;
     font-weight: 600;
+    margin-right: 8px;
 }
 
 /* Vision and Call to Action Styles */
 .vision-close {
-    font-size: 1.2em;
-    line-height: 1.9;
-    margin-top: 30px;
-    padding-top: 30px;
+    font-size: 1.3em;
+    line-height: 2;
+    margin-top: 35px;
+    padding-top: 35px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #00cc99;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .call-to-action {
-    font-size: 1.4em;
+    font-size: 1.5em;
     text-align: center !important;
-    margin-top: 40px !important;
+    margin-top: 45px !important;
     font-weight: 600;
     color: #00cc99;
+    text-shadow: 0 2px 4px rgba(0, 204, 153, 0.2);
+    letter-spacing: 0.2px;
+}
+
+/* Elegant Scoring System */
+.elegant-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.elegant-list li {
+    display: flex;
+    align-items: flex-start;
+    margin: 35px 0;
+    line-height: 1.8;
+}
+
+.elegant-list strong {
+    color: #ffd700;
+    font-size: 1.1em;
+    width: 120px;
+    margin-right: 25px;
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 3px;
+}
+
+.score-description {
+    flex: 1;
+}
+
+.score-range {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.score-note {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 30px;
 } 

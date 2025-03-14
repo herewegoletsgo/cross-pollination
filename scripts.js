@@ -24,8 +24,8 @@ function renderIdeaCards() {
             <p>${idea.shortDescription}</p>
             <p><strong>Technology:</strong> ${idea.technology}</p>
             <p><strong>Values:</strong> ${idea.values}</p>
-            <button onclick="alert('Pledge interest—details soon.')">Capital: Open</button>
-            <button onclick="toggleMoreInfo(this)">Learn More</button>
+            <button class="capital-btn" onclick="alert('Pledge interest—details soon.')">Capital: Open</button>
+            <button class="learn-more-btn" onclick="toggleMoreInfo(this)">Learn More</button>
             <div class="more-info">
                 <h4>Problem Addressed</h4>
                 <p>${idea.problemAddressed}</p>
